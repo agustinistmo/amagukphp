@@ -1,0 +1,1 @@
+<?php $this->view->demo_form->printForm(); ?>

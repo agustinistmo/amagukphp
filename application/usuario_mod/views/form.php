@@ -1,0 +1,1 @@
+<?php $this->view->usuario_form->printForm(); ?>

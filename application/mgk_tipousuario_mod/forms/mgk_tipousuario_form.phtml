@@ -1,0 +1,68 @@
+<ul class="breadcrumb">
+		<li><a href="<?php print URL_HOME?>/index.php">Inicio</a> <span class="divider">/</span></li>
+		<li><a href="<?php print URL_HOME?>/index.php/mgk_tipousuario/lista">mgk_tipousuario</a> <span class="divider">/</span></li>
+		<li class="active">Formulario</li>
+		</ul><div id="nav_bar">
+		<a href="<?php print URL_HOME?>/index.php/mgk_tipousuario/lista">Lista</a> |
+		<a href="<?php print URL_HOME?>/index.php/mgk_tipousuario/form">Nuevo</a>
+		</div>
+		
+		<?php if ($this->mensaje!=""):?>
+		    <div class="alert <?php print $this->css_mensaje;?>">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+		    <strong><?php print $this->tipo_mensaje;?> !</strong> <?php print $this->mensaje;?>.
+		    </div>
+		<?php endif;?>
+		
+		<div id="form_content">
+		<form class="form-horizontal" name="<?php print $this->getName();?>" id="<?php print $this->getName();?>" action="" method="<?php print $this->getMethod();?>">
+		<input type="hidden" id="form_name" name="form_name" value="<?php print $this->getName();?>" >
+		<fieldset class="stylized"  >
+		<legend>mgk_tipousuario</legend>
+		<input type="hidden" id="db_operacion" name="db_operacion" value="<?php print $this->getDb_operacion();?>" >
+		
+
+			<div class="control-group">
+			<label class="control-label" for="tipo_usuario_id">Tipo_usuario_id *</label>
+			<div class="controls">
+			<input maxlength=11 type="text" name="tipo_usuario_id" id="tipo_usuario_id" placeholder="Tipo_usuario_id" value="<?php print $this->bean->getTipo_usuario_id();?>" style="width: 132px"  >
+			</div>
+			</div>
+			
+
+			<div class="control-group">
+			<label class="control-label" for="tipo_usuario_nombre">Tipo_usuario_nombre *</label>
+			<div class="controls">
+			<input   type="text" name="tipo_usuario_nombre" id="tipo_usuario_nombre" placeholder="Tipo_usuario_nombre" value="<?php print $this->bean->getTipo_usuario_nombre();?>" style="width: 200px"  >
+			</div>
+			</div>
+			
+
+			<div class="control-group">
+			<label class="control-label" for="descripcion">Descripcion </label>
+			<div class="controls">
+			<input maxlength=83.3333333333 type="text" name="descripcion" id="descripcion" placeholder="Descripcion" value="<?php print $this->bean->getDescripcion();?>" style="width: 490px"  >
+			</div>
+			</div>
+			
+
+	
+	
+</fieldset>
+				
+ <div class="control-group">
+<div class="controls">
+<label class="checkbox">
+<dl>
+		<dd> <div id="div_descripcion" class="form_label_message"> * requerido </div>
+		</dd>
+		</dl>
+</label>
+<input class='btn btn-primary' type="submit" value="Enviar"/>				
+<input  class='btn btn-inverse' type="reset" value="Restablecer">
+</div>
+</div>
+	
+	
+</form>
+</div>

@@ -1,0 +1,1 @@
+<?php $this->view->mgk_historiaacceso_form->printForm(); ?>

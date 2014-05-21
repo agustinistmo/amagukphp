@@ -1,0 +1,22 @@
+{
+	"login.tiene_cuenta"	:"¿tiene cuenta?",
+	"login.usuario"			:"usuario o email",
+	"login.password"		:"Password",
+	"login.recordarme"		:"Recordarme",
+	"login.olvido_pwd"		:"Olvidó su password?",
+	"login.olvido_usuario"	:"Olvidó su nombre de usuario",
+	"login.bye"				:"Hasta pronto",
+	"login.acceso"			:"Datos",
+	
+	"menu.entrar"			:"Login",
+	"menu.salir"			:"Salir",
+	"menu.inicio"			:"Inicio",
+	"menu.sitios"			:"Sitios",
+	"menu.ciudades"			:"Ciudades",
+	
+	"pie.siguenos"			:"siguenos",
+	
+	"sistema.nombre"		:"Amaguk",
+	
+	"saludo":"Bienvenido"
+}
