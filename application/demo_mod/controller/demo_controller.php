@@ -12,7 +12,7 @@
 class demo_controller extends Amaguk_controller {
 
 	function __construct(){
-		$this->controller_title="Demo";
+		$this->controller_title="Demostración";
 	}
 
 
@@ -114,8 +114,8 @@ class demo_controller extends Amaguk_controller {
 		$this->items = $dao->consulta_manual();
 	}
 	
-	public function plantilla1_action(){
-		$this->layout="clear";
+	public function plantilla_inactiva_action(){
+		$this->layoutHide();
 		$arreglo= array();
 		$arreglo["clave"]=48;
 		$arreglo["nombre"]='enrique c. rebsamen';
@@ -124,20 +124,36 @@ class demo_controller extends Amaguk_controller {
 		$this->items = $arreglo;
 	}
 	
-	public function plantilla2_action(){
-		$this->layout="plantilla2";
-		$arreglo= array();
-		$arreglo["clave"]=48;
-		$arreglo["nombre"]='enrique c. rebsamen';
-		$arreglo["pais"]='México';
-		$this->json = json_encode($arreglo);
-		$this->items = $arreglo;
+	public function plantilla_basica_action(){
+		$this->layout="basic";
 	}
+	
+	public function plantilla_bootstrap_action(){
+		$this->action_title="Plantilla Bootstrap";
+	}
+	
+	public function configuracion_db_action(){
+		$this->action_title="Configuración de base de datos";
+	}	
 
 	public function acercade_action(){
 		$this->action_title="Acerca de Amaguk PHP Framework";
-		
 	}
+	
+	public function sin_vista_action(){
+		$this->actionHide();
+		print "Según sea la nacesidad, puedes ejecutar una acción aunque no tenga archivo para la vista";
+	}
+	
+	public function json_action(){
+		$this->actionHide();
+		$this->layoutHide();
+		$arreglo= array();
+		$arreglo[] = array( "cita"=>"Juan 3:16", "texto" =>"16 Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito, para que todo aquel que en él cree, no se pierda, mas tenga vida eterna.");
+		$arreglo[] = array( "cita"=>"Romanos 3:23", "texto" =>"Porque la paga del pecado es muerte, mas la dádiva de Dios es vida eterna en Cristo Jesús Señor nuestro.");			
+		print_r ( json_encode($arreglo) );
+		print "<br><br> O para cualquier otra cosa que se requiera, se puede ejecutar una acción sin plantilla y sin archivo de vista";
+	}	
 
 }
 ?>

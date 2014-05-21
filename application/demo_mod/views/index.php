@@ -1,4 +1,3 @@
-
 <ul class="nav nav-tabs">
   <li class="active"><a href="<?php print MGK_HOME?>/index.php/demo/">Inicio</a></li>
   <li><a href="<?php print MGK_HOME?>/index.php/demo/lista">Listado</a></li>

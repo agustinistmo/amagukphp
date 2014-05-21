@@ -14,6 +14,10 @@ class index_controller extends amaguk_controller {
 	public function index_action() {
 		$this->action_title="Bienvenido";
 	}
+	
+	public function hola_mundo_action() {
+		$this->action_title="Bienvenido";
+	}	
 
 }
 ?>
