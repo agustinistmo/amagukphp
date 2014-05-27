@@ -26,7 +26,7 @@ $d.=""; // esto en caso que el proyecto amaguk se encuentre dentro de otro proye
 define('MGK_ROOT_DIRECTORY', $d );
 //define('MGK_ROOT_DIRECTORY',($_SERVER['HTTP_HOST']=="actividades.destec-mex.com.mx")?"":"/actividades");
 define('MGK_LANGUAGE', "es" );
-define('MGK_SESSION_NAME', "ses_achfood_".MGK_ROOT_DIRECTORY );
+define('MGK_SESSION_NAME', "ses_mgk_".MGK_ROOT_DIRECTORY );
 define('MGK_SHOW_INFO', false );
 
 define('MGK_PROJECT_REAL_PATH', realpath(dirname(__FILE__) ));
