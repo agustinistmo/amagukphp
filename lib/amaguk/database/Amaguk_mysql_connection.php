@@ -149,7 +149,7 @@ class Amaguk_mysql_connection extends Amaguk_database_connection {
 		$_POST["__query__"].="<hr>".$query;		
 		$this->result = mysqli_query( $this->link_identifier , $this->query);
 		$this->query="";
-		
+		$this->get_errno();
 	}
 /* (non-PHPdoc)
 	 * @see amaguk_database_connection_interface::get_link_identifier()
@@ -161,7 +161,8 @@ class Amaguk_mysql_connection extends Amaguk_database_connection {
 	
 	public function get_errno() {
 		// TODO Auto-generated method stub
-		return mysqli_errno( $this->link_identifier );		
+		$this->errno = mysqli_errno( $this->link_identifier ); 
+		return $this->errno;	
 	}
 	
 	public function get_error() {
@@ -205,6 +206,8 @@ class Amaguk_mysql_connection extends Amaguk_database_connection {
 	}
 
 	public function insert_id(){
+		if ( $this->errno > 0 )
+			return 0;
 		return mysqli_insert_id($this->link_identifier);		
 	}
 	
